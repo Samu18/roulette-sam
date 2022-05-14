@@ -26,15 +26,7 @@ class SecurityControl
             && stripos($routeName, '_anonymous') === false
             && stripos($routeName, '_twig_') === false
             && stripos($routeName, '_profiler') === false
-            && stripos($routeName, 'generate_invoice') === false
-            && stripos($routeName, 'process_amazon_mws') === false
-            && stripos($routeName, 'api') === false
-            && stripos($routeName, 'user_recovery_password') === false
-            && stripos($routeName, 'user_reset_password') === false
-            && stripos($routeName, 'user_change_email') === false
-            && stripos($routeName, 'app_login') === false
-            && stripos($routeName, 'bazinga_jstranslation_js') === false
-            && stripos($routeName, 'fos_js_routing_js') === false
+            && stripos($routeName, 'roulette_') === false
             && stripos($routeName, '_wdt') === false) {
             if (!$this->auth->isGranted($routeName)) {
                 $exception = new AccessDeniedException('Access denied');
