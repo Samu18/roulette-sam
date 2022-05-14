@@ -39,13 +39,17 @@ Paso 7. Entrar al proyecto por el navegador.
 
 * Ruta de gestion local: http://localhost:8081/roulette-sam/public/login 
 
-* Ruta de juego remota: http://3.23.21.49/roulette-sam/public
+    *Para ingresar en la gestión las credenciales son:*
+
+    Usuario: admin | Contraseña: e#KvwC5E&EAE
+
+
+* Ruta de juego remota: http://localhost:8081/roulette-sam/public
 
 * Ruta de juego local: http://localhost:8081/roulette-sam/public
 
-*Para ingresar en la gestión las credenciales son:*
+![App Screenshot](https://i.postimg.cc/nhV7JGQZ/game-roulette-sam.jpg)
 
-Usuario: admin2@gmail.com | Contraseña: e#KvwC5E&EAE
 ## Autor
 Samuel David Sánchez Vallejo <samuel.softdev@gmail.com>
 - [@Samu18](https://github.com/Samu18)
