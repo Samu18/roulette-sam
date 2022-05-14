@@ -1,0 +1,16 @@
+{{ form_start(form, {'attr': {'id': 'formUser'}}) }}
+
+<div class="row">
+    <div class="col-md-6">
+        {{ form_row(form.userName) }}
+        {{ form_row(form.email) }}
+        {{ form_row(form.userProfile) }}
+    </div>
+    <div class="col-md-6">
+        {{ form_row(form.usernameCustom) }}
+        {{ form_row(form.password) }}
+        {{ form_row(form.enabled) }}
+    </div>
+</div>
+
+{{ form_end(form) }}

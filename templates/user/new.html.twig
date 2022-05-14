@@ -1,0 +1,41 @@
+{% extends 'dashboard/layout.html.twig' %}
+
+{% block title %}{{ 'label.users'|trans }}{% endblock %}
+
+{% block buttonBack %}
+    {{ path('user_index') }}
+{% endblock %}
+
+{% block hrefHomeClass %}
+{% endblock %}
+
+{% block breadcrumb %}
+    {{ parent() }}
+    <li class="breadcrumb-item" aria-current="page"><a
+                href="{{ path('user_index') }}">{{ 'label.users'|trans }}</a></li>
+    <li class="active breadcrumb-item" aria-current="page">{{ 'label.create'|trans }}</li>
+{% endblock %}
+
+{% block contentOptions %}
+{% endblock %}
+
+{% block titlePage %}
+    {{ 'label.create.new.user'|trans }}
+{% endblock %}
+
+{% block buttonPage %}
+    <button form="formUser" onclick="return validationFormUser()"
+            class="btn btn-primary">{{ 'label.save'|trans }}</button>
+{% endblock %}
+
+{% block descriptionPage %}
+{% endblock %}
+
+{% block content %}
+    {{ include('user/_form.html.twig') }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset("build/user.js") }}"></script>
+{% endblock %}

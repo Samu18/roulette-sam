@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User{% endblock %}
+
+{% block body %}
+    <h1>User</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ user.id }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ user.email }}</td>
+            </tr>
+            <tr>
+                <th>Roles</th>
+                <td>{{ user.roles ? user.roles|join(', ') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td>{{ user.password }}</td>
+            </tr>
+            <tr>
+                <th>Permissions</th>
+                <td>{{ user.permissions }}</td>
+            </tr>
+            <tr>
+                <th>PermissionsExtras</th>
+                <td>{{ user.permissionsExtras }}</td>
+            </tr>
+            <tr>
+                <th>RoleId</th>
+                <td>{{ user.roleId }}</td>
+            </tr>
+            <tr>
+                <th>Enabled</th>
+                <td>{{ user.enabled ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Owner</th>
+                <td>{{ user.owner }}</td>
+            </tr>
+            <tr>
+                <th>CreatedAt</th>
+                <td>{{ user.createdAt ? user.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>UpdateAt</th>
+                <td>{{ user.updateAt ? user.updateAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>ConfirmationToken</th>
+                <td>{{ user.confirmationToken }}</td>
+            </tr>
+            <tr>
+                <th>ConnectionName</th>
+                <td>{{ user.connectionName }}</td>
+            </tr>
+            <tr>
+                <th>UsernameCustom</th>
+                <td>{{ user.usernameCustom }}</td>
+            </tr>
+            <tr>
+                <th>EmailToken</th>
+                <td>{{ user.emailToken }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('user_index') }}">back to list</a>
+
+    <a href="{{ path('user_edit', {'id': user.id}) }}">edit</a>
+
+    {{ include('user/_delete_form.html.twig') }}
+{% endblock %}

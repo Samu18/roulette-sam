@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Player index{% endblock %}
+
+{% block body_content %}
+
+    <h1>Players</h1>
+
+    <a  href="{{ path('player_new') }}" style="text-decoration: none;"> <i class="ml-5 icofont-ui-add icofont-2x"></i></a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Username</th>
+                <th>Amount</th>
+                <th>Enabled</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for player in players %}
+            <tr>
+                <td>{{ player.id }}</td>
+                <td>{{ player.username }}</td>
+                <td>{{ player.amount }}</td>
+                <td>{{ player.enabled ? 'Yes' : 'No' }}</td>
+                <td>
+                    <a href="{{ path('player_show', {'id': player.id}) }}"><i class="icofont-eye-alt"></i></a>
+                    <a href="{{ path('player_edit', {'id': player.id}) }}"><i class="icofont-ui-edit"></i></a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}

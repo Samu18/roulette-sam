@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no"/>
+    <meta name="msapplication-tap-highlight" content="no">
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+              integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+              crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ asset('css/icofont.min.css') }}">
+    {% endblock %}
+
+    {% block fonts %}
+    {% endblock %}
+</head>
+<body>
+{% block body %}
+    {% block body_header %}
+
+        {% if app.user %}
+            <a class="float-right" style="text-decoration:none" href="{{ path('app_logout') }}">
+                <button type="button" tabindex="0"
+                        class="dropdown-item"><i class="icofont-logout"></i> Salir</button>
+            </a>
+        {% endif %}
+
+    {% endblock %}
+
+    <div class="container mt-5">
+        <div class="row ">
+        {% block body_content %}
+        {% endblock %}
+    </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+            crossorigin="anonymous"></script>
+{% endblock %}
+</body>
+</html>
