@@ -26,6 +26,7 @@ $ composer install
 Paso 5. Ejecutar la creación de la base de datos y sus respectivas tablas, ubicado desde la raiz del proyecto para ejecutar el comando.
 
 $ php bin/console doctrine:database:create
+
 $ php bin/console doctrine:schema:update --force
 
 Paso 6. Crear registro de usuario admin para gestionar los jugadores, ubicado desde la raiz del proyecto para ejecutar el comando.
