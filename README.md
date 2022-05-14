@@ -45,7 +45,7 @@ Paso 7. Entrar al proyecto por el navegador.
 
 *Para ingresar en la gestión las credenciales son:*
 
-Usuario: admin | Contraseña: e#KvwC5E&EAE
+Usuario: admin2@gmail.com | Contraseña: e#KvwC5E&EAE
 ## Autor
 Samuel David Sánchez Vallejo <samuel.softdev@gmail.com>
 - [@Samu18](https://github.com/Samu18)
