@@ -44,7 +44,7 @@ Paso 7. Entrar al proyecto por el navegador.
     Usuario: admin2@gmail.com | Contraseña: e#KvwC5E&EAE
 
 
-* Ruta de juego remota: http://localhost:8081/roulette-sam/public
+* Ruta de juego remota: http://3.23.21.49/roulette-sam/public
 
 * Ruta de juego local: http://localhost:8081/roulette-sam/public
 
