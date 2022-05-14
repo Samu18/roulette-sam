@@ -1,0 +1,137 @@
+body {
+                background-color: #1C1C1C;
+            }
+            .content-players {
+                background-color: #474747;
+                max-height: 60vh;
+                overflow-y: auto;
+            }
+            .item-player {
+                padding: 0.5rem 0.2rem;
+                color: white;
+                max-height: 12vh;
+                /*float: left;*/
+            }
+            .item-player b {
+                font-size: 1.4rem;
+            }
+            .item-player input[type="number"] {
+                width: 45%;
+            }
+            .item-player {
+            }
+            a.btn.btn-game {
+                color: #64dc17;
+                font-weight: 900;
+                font-size: 3rem;
+                background-color: white;
+            }
+            .img-game {
+                width: 70%;
+            }
+            @keyframes rotation-roulette {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(359deg);
+                }
+            }
+            .rotate {
+                animation: rotation-roulette 1600ms infinite linear;
+            }
+            .content-input {
+                /* position: relative; */
+                margin-bottom: 30px;
+                /* padding: 5px 0 5px 60px; */
+                display: block;
+                width: 40px;
+            }
+            .content-input input {
+                visibility: hidden;
+                position: relative;
+                right: 0;
+            }
+            .content-input input, .content-select select {
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+            }
+            .content-input input[type=radio] + i {
+                height: 30px;
+                width: 30px;
+                border-radius: 100%;
+                left: 15px;
+            }
+            .content-input input + i {
+                background: #fff;
+                border: 2px solid rgba(0, 0, 0, 0.2);
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            .content-input input[type=radio]:checked + i:before {
+                transform: scale(1);
+                opacity: 1;
+            }
+            .content-input input[type=radio] + i:before {
+                content: '';
+                display: block;
+                height: 22px;
+                width: 22px;
+                border-radius: 100%;
+                position: absolute;
+                z-index: 1;
+                top: 3px;
+                left: 2px;
+                transition: all 0.25s ease;
+                transform: scale(0) /* Lo reducimos a 0*/;
+                opacity: 0;
+            }
+            .content-input.green input[type=radio] + i:before {
+                background: #64dc17;
+            }
+            .content-input.red input[type=radio] + i:before {
+                background: red;
+            }
+            .content-input.black input[type=radio] + i:before {
+                background: black;
+            }
+            .content-input.red i {
+                margin-left: 15%;
+            }
+            .content-input.black i {
+                margin-left: 30%;
+            }
+            .content-result {
+                float: right;
+                display: grid;
+                max-height: 60vh;
+                text-align: center;
+                background-color: #c3c3c3;
+                padding: 1%;
+                border-radius: 0.25rem;
+                overflow-y: auto;
+            }
+            i.result-color:before {
+                content: '';
+                display: block;
+                height: 30px;
+                width: 30px;
+                border-radius: 100%;
+                z-index: 1;
+                margin-bottom: 20%;
+            }
+            i.result-color.green:before {
+                background: #64dc17;
+            }
+            i.result-color.red:before {
+                background: red;
+            }
+            i.result-color.black:before {
+                background: black;
+            }
+            #noPlayerAlert{
+                position: absolute;
+                z-index: 4;
+            }
